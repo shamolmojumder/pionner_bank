@@ -37,3 +37,21 @@ depositBtn.addEventListener("click", function() {
     // document.getElementById("current-balance").innerText = totalBalance;
     // document.getElementById("depositAmount").value = " "
 })
+
+// withdrawBtn
+document.getElementById("withdrawBtn").addEventListener("click", function() {
+    const withdrawAmount = document.getElementById("withdrawAmount").value
+    const withdrawAmountNumber = parseFloat(withdrawAmount);
+
+    const currentWithdraw = document.getElementById("currentWithdraw").innerText;
+    const currentWithdrawNumber = parseFloat(currentWithdraw);
+    const totalWithdraw = currentWithdrawNumber + withdrawAmountNumber;
+    document.getElementById("currentWithdraw").innerText = totalWithdraw
+    document.getElementById("depositAmount").value = " "
+    const withdraw = document.getElementById("currentBalance").innerText
+    const withdrawNumber = parseFloat(withdraw)
+    const totalwithdrawNumber = withdrawNumber - currentWithdrawNumber;
+
+    document.getElementById("currentBalance").innerText = totalwithdrawNumber
+
+})
